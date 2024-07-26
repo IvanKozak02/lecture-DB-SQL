@@ -212,44 +212,42 @@ VALUES ('Action'),
        ('Thriller');
 
 INSERT INTO movie_genre (movie_id, genre_id)
-VALUES (1, 1), -- Inception - Action
-       (1, 4), -- Inception - Sci-Fi
-       (2, 1), -- The Matrix - Action
-       (2, 4), -- The Matrix - Sci-Fi
-       (3, 4), -- Interstellar - Sci-Fi
-       (4, 2), -- Black Swan - Drama
-       (5, 2), -- Joker - Drama
-       (5, 5); -- Joker - Thriller
+VALUES (1, 1),
+       (1, 4),
+       (2, 1),
+       (2, 4),
+       (3, 4),
+       (4, 2),
+       (5, 2),
+       (5, 5);
 
 INSERT INTO favorite_movie (user_id, movie_id)
-VALUES (1, 1), -- jdoe likes Inception
-       (1, 3), -- jdoe likes Interstellar
-       (2, 2), -- asmith likes The Matrix
-       (3, 4), -- bclark likes Black Swan
+VALUES (1, 1),
+       (1, 3),
+       (2, 2),
+       (3, 4),
        (4, 5);
--- mjones likes Joker
 
--- ERROR
 
-SELECT *
-FROM unknown_actor
-    INSERT
-INTO unknown_actor (first_name, last_name, role_description)
-VALUES
+
+
+INSERT
+    INTO unknown_actor (first_name, last_name, role_description)
+    VALUES
     ('Mog', 'Irg', 'Background actor with no specific role.'), ('Kol', 'Dag', 'Background actor with no specific role.'), ('Log', 'Mag', 'Extra in several scenes.');
 
 
 INSERT INTO actor (person_id, unknown_actor_id)
-VALUES (1, NULL),  -- Leonardo DiCaprio
-       (2, NULL),  -- Natalie Portman
-       (NULL, 1),  -- Unknown Actor 1
-       (NULL, 2),  -- Unknown Actor 2
-       (NULL, 3),  -- Unknown Actor 3
-       (3, NULL),  -- Unknown Actor 3
-       (4, NULL),  -- Unknown Actor 3
-       (5, NULL),  -- Unknown Actor 3
-       (10, NULL), -- Unknown Actor 3
-       (11, NULL); -- Unknown Actor 3
+VALUES (1, NULL),
+       (2, NULL),
+       (NULL, 1),
+       (NULL, 2),
+       (NULL, 3),
+       (3, NULL),
+       (4, NULL),
+       (5, NULL),
+       (10, NULL),
+       (11, NULL);
 
 SELECT *
 FROM movie
@@ -260,13 +258,13 @@ FROM character
     INSERT
 INTO character (character_name, description, role, actor_id, movie_id)
 VALUES
-    ('Cobb', 'The main character of the movie.', 'leading', 11, 1),                     -- Leonardo DiCaprio in Inception
-    ('Neo', 'The protagonist of the Matrix.', 'leading', 19, 2),                        -- Neo from The Matrix
-    ('Murphy Cooper', 'A scientist working in space.', 'supporting', 20, 3),            -- Jessica Chastain in Interstellar
-    ('Nina Sayers', 'A ballerina with psychological issues.', 'leading', 12, 4),        -- Natalie Portman in Black Swan
-    ('Arthur Fleck', 'A struggling comedian who becomes the Joker.', 'leading', 18, 5), -- Joaquin Phoenix in Joker
-    ('Hok Lok', 'Enemy.', 'supporting', 13, 5),                                         -- Joaquin Phoenix in Joker
-    ('Huj', 'Enk.', 'supporting', 13, 4); -- Joaquin Phoenix in Joker
+    ('Cobb', 'The main character of the movie.', 'leading', 11, 1),
+    ('Neo', 'The protagonist of the Matrix.', 'leading', 19, 2),
+    ('Murphy Cooper', 'A scientist working in space.', 'supporting', 20, 3),
+    ('Nina Sayers', 'A ballerina with psychological issues.', 'leading', 12, 4),
+    ('Arthur Fleck', 'A struggling comedian who becomes the Joker.', 'leading', 18, 5),
+    ('Hok Lok', 'Enemy.', 'supporting', 13, 5),
+    ('Huj', 'Enk.', 'supporting', 13, 4);
 
 
 select *
@@ -276,10 +274,10 @@ from actor
     INSERT
 INTO person_file (file_id, person_id, is_primary)
 VALUES
-    (11, 1, TRUE), -- Leonardo DiCaprio's primary photo
-    (12, 2, TRUE), -- Natalie Portman's primary photo
-    (13, 3, TRUE), -- Matt Damon's primary photo
-    (14, 4, TRUE), -- Scarlett Johansson's primary photo
-    (15, 5, TRUE); -- Joaquin Phoenix's primary photo
+    (11, 1, TRUE),
+    (12, 2, TRUE),
+    (13, 3, TRUE),
+    (14, 4, TRUE),
+    (15, 5, TRUE);
 
 
